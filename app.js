@@ -21,6 +21,7 @@ app.get('/',( req, res ) => {
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true  }, () => {
 	console.log("Connected to DB")
+    console.log("Git test")
 });
 
 app.listen(4000);
