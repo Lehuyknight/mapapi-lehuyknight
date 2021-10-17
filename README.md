@@ -1,2 +1,0 @@
-# mapapi-lehuyknight
-mapAPI
