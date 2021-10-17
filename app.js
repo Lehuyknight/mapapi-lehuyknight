@@ -24,4 +24,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true  }, () => {
     console.log("Git test")
 });
 
-app.listen(4000);
+app.listen(process.env.PORT);
