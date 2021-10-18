@@ -41,8 +41,7 @@ router.post('/add' , async (req , res) => {
         res.json({message: err});
     }
 });
-
-router.post('/del/:postId' , async (req , res) => {
+router.delete('/del/:postId' , async (req , res) => {
     
     try{
         const removePosts = await Post.remove({_id: req.params.postId})
@@ -53,7 +52,7 @@ router.post('/del/:postId' , async (req , res) => {
     }
 });
 
-router.post('/upd/:postId' , async (req , res) => {
+router.patch('/upd/:postId' , async (req , res) => {
     try{
         const updatePost = await Post.updateOne(
             {_id: req.params.postId}, 

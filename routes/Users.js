@@ -13,7 +13,7 @@ router.get('/' , async (req , res) => {
     }
 });
 
-router.get('/:userId' , async (req , res) => {
+router.delete('/del/:userId' , async (req , res) => {
     try{
         const user = await User.findById(req.params.userId);
         res.json( user );
@@ -24,7 +24,7 @@ router.get('/:userId' , async (req , res) => {
 
 });
 
-router.post('/add' , async (req , res) => {
+router.patch('/upd/:userId' , async (req , res) => {
     const user = new User({
         username: req.body.username,
         password: req.body.password,
@@ -64,7 +64,7 @@ router.post('/upd/:userId' , async (req , res) => {
         res.json(updateUser);
     }
     catch( err ) {
-        res.json({message: err});
+        res.json({ message: err });
     }
 });
 
