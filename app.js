@@ -14,6 +14,7 @@ const routerUser = require('./routes/Users')
 
 app.use('/map', routeMaps);
 app.use('/user', routerUser);
+app.use('/coffee', routeCoffee);
 
 app.get('/',( req, res ) => {
     res.send('hello home');
