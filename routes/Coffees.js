@@ -57,9 +57,9 @@ router.patch('/upd/:coffeeId' , async (req , res) => {
         const updateCoffee = await coffee.updateOne(
             {_id: req.params.coffeeId}, 
             { $set: {
-                title: req.body.nameTemple,
-                introduction: req.body.lat,
-                price: req.body.lng,
+                title: req.body.title,
+                introduction: req.body.introduction,
+                price: req.body.price,
                 type: req.body.type,
                 image: req.body.image,
             }} 
